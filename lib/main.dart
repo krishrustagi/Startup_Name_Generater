@@ -1,3 +1,11 @@
+/*
+    Author: BT19CSE089 - Krish Rustagi
+    
+    Rules:
+    1. Work for satisfaction and not for hunger.
+    2. Check for the corner cases.
+*/
+
 library config.globals;
 
 import 'package:flip_card/flip_card.dart';
@@ -66,7 +74,7 @@ class _RandomWordsState extends State<RandomWords> {
             Column(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(left: 75, top: 505),
+                  padding: EdgeInsets.only(left: 100, top: 740),
                 ),
                 ElevatedButton(
                   onPressed: (_saved.length != 4)
@@ -229,13 +237,14 @@ class _GridViewState extends State<GridView> {
   Widget getContainer(String str, String str1) {
     return Container(
         height: 150,
-        width: 200,
+        width: 150,
         margin: EdgeInsets.all(25.0),
         child: FlipCard(
           direction: FlipDirection.HORIZONTAL,
+          speed: 750,
           front: Container(
-            height: 150,
-            width: 200,
+            height: 100,
+            width: 100,
             decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.black,
